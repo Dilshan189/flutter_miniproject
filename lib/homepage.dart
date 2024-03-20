@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:normalproject/widget/card_widget.dart';
+
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -10,57 +13,31 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Mapp'),
       ),
-      body:  SingleChildScrollView(
+      body:  const SingleChildScrollView(
         child: Column(
           children: [
-            Card(
-                child: Container(
-                padding:  const EdgeInsets.all(8.0),
-               // color: Colors.grey,
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 5),
-                    Image.asset('images/rocket.png'),
-                    const Text('Title',
-                      style: TextStyle(fontSize: 22,
-                      fontWeight: FontWeight.bold),
-                    ),
-                    const Text('Description'),
-                  ],
-                )
-              ),
+            Row(
+              children: [
+                Expanded(
+                  child:CardWidget(title: 'Rocket',
+                    imagePath: 'images/rocket.png',),
+                ),
+              ],
             ),
             Row(
               children: [
                   Expanded(
-                    child:Card(
-                    child: Container(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset('images/space.png'),
-
-                    ),
-                    ),
+                   child: CardWidget(title: 'Space',
+                     imagePath: 'images/space.png',),
                   ),
-        
-                Expanded(
-                  child:Card(
-                      child: Container(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset('images/travel.png'),
+               Expanded(
+                  child: CardWidget(title: 'Travel',
+                    imagePath: 'images/travel.png',),
                       ),
-                    ),
-                ),
               ],
             ),
-            Card(
-              child: Container(
-                  padding:  const EdgeInsets.all(8.0),
-                  // color: Colors.grey,
-                  width: double.infinity,
-                  child: Image.asset('images/yeah.png')
-              ),
-            ),
+            CardWidget(title: 'Yeah',
+              imagePath: 'images/yeah.png',),
           ],
         ),
       ),
