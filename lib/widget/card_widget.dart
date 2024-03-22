@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:normalproject/class/item_class.dart';
 import '../core/constan.dart';
 
 
 class CardWidget extends StatelessWidget {
   const CardWidget({super.key,
-    required this.title,
-    this.imagePath,
+    required this.box,
   });
-  final String title;
-  final String? imagePath;
+  final ItemClass box;
+
 
 
   @override
@@ -20,10 +20,11 @@ class CardWidget extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: kDouble5),
-                Image.asset(imagePath!),
+                Image.asset(box.imagePath),
                  Text(
-                  title,
-                  style: const TextStyle(fontSize: 22,
+                  box.title,
+                  style: const TextStyle(
+                      fontSize: 22,
                       fontWeight: FontWeight.bold),
                 ),
                 const Text(' This is the Description'),

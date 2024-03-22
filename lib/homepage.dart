@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:normalproject/class/item_class.dart';
 import 'package:normalproject/widget/card_widget.dart';
 
 
@@ -13,34 +14,34 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Mapp'),
       ),
-      body:  const SingleChildScrollView(
+      body:   SingleChildScrollView(
         child: Column(
           children: [
+                 CardWidget(
+                   box:ItemClass(title: 'Rocket ',imagePath: 'images/rocket.png'),),
+
             Row(
-              children: [
+              children:  [
                 Expanded(
-                  child:CardWidget(title: 'Rocket',
-                    imagePath: 'images/rocket.png',),
-                ),
-              ],
+                  child: CardWidget(
+                    box:ItemClass(title: 'Space ',imagePath: 'images/space.png'),
+    ),
             ),
-            Row(
-              children: [
+
                   Expanded(
-                   child: CardWidget(title: 'Space',
-                     imagePath: 'images/space.png',),
+                   child: CardWidget(
+                     box:ItemClass(title: 'Travel ', imagePath: 'images/travel.png'),
+                   ),
                   ),
-               Expanded(
-                  child: CardWidget(title: 'Travel',
-                    imagePath: 'images/travel.png',),
-                      ),
               ],
             ),
-            CardWidget(title: 'Yeah',
-              imagePath: 'images/yeah.png',),
-          ],
+      CardWidget(
+        box:ItemClass(title: 'Yeah ', imagePath: 'images/yeah.png'),
+
         ),
-      ),
+      ],
+    ),
+    ),
     );
   }
 }
