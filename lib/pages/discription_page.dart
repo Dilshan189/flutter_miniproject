@@ -24,6 +24,34 @@ class _DesciptionpageState extends State<Desciptionpage> {
       appBar: AppBar(
         //automaticallyImplyLeading: false, ///Appbar arrow key close///
         title: Text(widget.box.title),
+          backgroundColor: Colors.red,
+
+
+        /// Added the close button //////////////////////////
+
+   /*     leading:IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.dangerous_outlined),
+
+        ),
+
+ */
+        /// set the app bar icon ////////////////////////////
+        actions: [
+          IconButton(
+              onPressed: () {
+               ScaffoldMessenger.of(context).showSnackBar(
+                 const SnackBar(
+                   content: Text('Snackbar'),
+                   behavior: SnackBarBehavior.floating,
+                   ),
+                 );
+               },
+              icon: const Icon(Icons.info_outline)),
+
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -36,20 +64,42 @@ class _DesciptionpageState extends State<Desciptionpage> {
                 children: [
                   TextButton(
                     onPressed: () {
-
+                      setState(() {
+                        fontSizeCustom =25;
+                      });
                     },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ) ,
                     child: const Text('Small Title'),
                   ),
 
 
                   OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom =35;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ) ,
                     child: const Text('Medium Title'),
                   ),
 
 
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom =50;
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ) ,
                     child: const Text('Large Title'),
                   ),
 
@@ -57,10 +107,13 @@ class _DesciptionpageState extends State<Desciptionpage> {
                   FilledButton(
                     onPressed: () {
                       setState(() {
-
+                        fontSizeCustom =200;
                       });
-                      fontSizeCustom =200;
-                    },
+                      },
+                    style: FilledButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ) ,
                     child: const Text('Huge Title'),
                   ),
 
@@ -75,6 +128,8 @@ class _DesciptionpageState extends State<Desciptionpage> {
                   ),
                 ),
               ),
+
+
               const Text(
                 beconDescription,
                 style: TextStyle(
@@ -83,6 +138,8 @@ class _DesciptionpageState extends State<Desciptionpage> {
                 textAlign: TextAlign.justify,
               ),
               const SizedBox(height: kDouble10),
+
+
               const Text(
                 beconDescription,
                 style: TextStyle(

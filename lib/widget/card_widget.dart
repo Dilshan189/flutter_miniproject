@@ -45,6 +45,6 @@ class CardWidget extends StatelessWidget {
         ),
     );
 
-    ///end today
+
   }
 }
