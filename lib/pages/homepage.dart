@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
                 Expanded(
                   child: CardWidget(
                     box:ItemClass(title: 'Space ',imagePath: 'images/space.png'),
-    ),
+              ),
             ),
 
                   Expanded(
@@ -35,13 +35,12 @@ class MyHomePage extends StatelessWidget {
                   ),
               ],
             ),
-      CardWidget(
-        box:ItemClass(title: 'Yeah ', imagePath: 'images/yeah.png'),
+            CardWidget(
+             box:ItemClass(title: 'Yeah ', imagePath: 'images/yeah.png'),
 
         ),
       ],
-    ),
-    ),
+    ),),
     );
   }
 }
