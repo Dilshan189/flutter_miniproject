@@ -1,16 +1,61 @@
-# normalproject
+📱 Flutter Practice Project
 
-A new Flutter project.
+This is a practice Flutter project I built while learning the fundamentals of Flutter app development.
+It covers the basics of widgets, state management, navigation, and app structure.
 
-## Getting Started
+🎯 Purpose
 
-This project is a starting point for a Flutter application.
+The goal of this project was to:
 
-A few resources to get you started if this is your first Flutter project:
+Learn Flutter project structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Practice creating custom widgets
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Understand navigation between pages
+
+Build confidence with Dart & Flutter framework
+
+📂 Project Structure
+flutter_practice_project/
+├── lib/
+│   ├── class/      # Practice classes & models
+│   ├── core/       # Core app logic
+│   ├── pages/      # App pages/screens
+│   ├── widget/     # Custom reusable widgets
+│   └── main.dart   # App entry point
+└── README.md
+
+🚀 Getting Started
+1. Clone the repo
+git clone https://github.com/your-username/flutter_practice_project.git
+cd flutter_practice_project
+
+2. Install dependencies
+flutter pub get
+
+3. Run the app
+flutter run
+
+🛠️ Tech Stack
+
+Flutter (Dart)
+
+Material Design
+
+📸 Screenshots
+
+(Add sample screenshots of your app here)
+
+📖 Learning Outcomes
+
+✅ Learned how to structure a Flutter project
+
+✅ Built custom widgets & reusable components
+
+✅ Practiced page navigation and state handling
+
+✅ Got comfortable with Flutter hot reload
+
+📄 License
+
+This project is for learning purposes only.
